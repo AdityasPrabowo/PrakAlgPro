@@ -1,0 +1,16 @@
+# Weekly Exercise 1
+
+print('Nama         : Aditya Setyo Prabowo')
+print('NPM          : 2420506037')
+print('Alamat       : Temanggung, Jawa Tengah')
+print('Tinggi Badan : 162cm')
+print('Berat Badan  : 50kg')
+
+# Weeekly Exercist 2
+print('\033[1m'+ 'UNIVERSITAS TIDAR' +'\033[0m')
+print('Universitas Tidar merupakan Perguruan Tinggi Negeri yang telah ditetapkan berdasarkan Peraturan Presdien Republik Indonesia nomor 23 Tahun 2014 pada tanggal 1 April 2014')
+print('\n''\033[1m'+ 'JURUSAN TEKNIK ELEKTRO, MEKATRONIKA, TEKNOLOGI INFORMASI'+'\033[0m')
+print('Jurusan Teknik Elektro, Mekatronika, dan Teknologi Informasi terdiri atas tiga program studi, antara lain:')
+print('1. S1 Teknik Elektro \x1b[3m(Bachelor of  Elektrical Engineering)\x1b[0m ')
+print('2. S1 Teknologi Informasi \x1b[3m(Bachelor of Information Technology)\x1b[0m ')
+print('3. S1 Teknik Mekatronika \x1b[3m(Bachelor of Mechatronics Engineering)\x1b[0m')
