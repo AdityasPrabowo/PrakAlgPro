@@ -1,0 +1,76 @@
+# Weekly Exercise 1
+
+panjang = 20.5
+lebar = 25
+tinggi = 10
+
+keliling = 2*(panjang+lebar)
+luas = panjang*lebar
+volume = panjang*lebar*tinggi
+
+print("Panjang = " + str(panjang))
+print("Lebar = " + str(lebar))
+print("Tinggi = " + str(tinggi))
+print("Keliling = " + str(keliling))
+print("Volume = " + str(volume))
+
+# Weekly Exercise 2
+
+data_mahasiswa = {
+    "Shafira": {"Kalkulus 1": 85, "Metode Statistika": 75},
+    "Amanda": {"Kalkulus 1": 80, "Metode Statistika": 90},
+    "Aditya": {"Kalkulus 1": 75, "Metode Statistika": 80},
+    "Nedia": {"Kalkulus 1": 95, "Metode Statistika": 80},
+    "Widya": {"Kalkulus 1": 85, "Metode Statistika": 85},
+    "Hanif": {"Kalkulus 1": 75, "Metode Statistika": 90},
+    "Andi": {"Kalkulus 1": 70, "Metode Statistika": 75},
+    "Dhanar": {"Kalkulus 1": 85, "Metode Statistika": 85},
+    "Hikma": {"Kalkulus 1": 80, "Metode Statistika": 75},
+}
+# 1 Rata-rata nilai Shafira pada kedua mata kuliah
+rata_rata_shafira = (data_mahasiswa["Shafira"]["Kalkulus 1"] + data_mahasiswa["Shafira"]["Metode Statistika"]) / 2
+print("1. Rata-rata nilai Shafira:", rata_rata_shafira)
+
+# 2 jumlah nilai hanif dan andi untuk semua mata kuliah
+jumlah_hanif_andi = data_mahasiswa["Hanif"]["Kalkulus 1"] + data_mahasiswa["Hanif"]["Metode Statistika"] + data_mahasiswa["Andi"]["Kalkulus 1"] + data_mahasiswa["Andi"]["Metode Statistika"]
+print("2. Jumlah nilai Hanif dan Andi unruk semua mata kuliah:", jumlah_hanif_andi)
+
+# 3	Rata-rata nilai Widya, Dhanar, Hikma, dan Nedia pada masing-masing mata kuliah
+rata_rata_kalkulus_1 = (data_mahasiswa["Widya"]["Kalkulus 1"] + data_mahasiswa["Dhanar"]["Kalkulus 1"] + data_mahasiswa["Hikma"]["Kalkulus 1"] + data_mahasiswa["Nedia"]["Kalkulus 1"]) / 4
+print("3. a.Rata-rata nilai kalkulus 1 untuk Widya, Dhanar, Hikma, dan Nedia:", rata_rata_kalkulus_1)
+rata_rata_metode_statistika = (data_mahasiswa["Widya"]["Metode Statistika"] + data_mahasiswa["Dhanar"]["Metode Statistika"] + data_mahasiswa["Hikma"]["Metode Statistika"] + data_mahasiswa["Nedia"]["Metode Statistika"]) / 4
+print("   b.Rata-rata nilai metode statistika untuk Widya, Dhanar, Hikma, dan Nedia:", rata_rata_metode_statistika)
+
+# 4 Rata-rata nilai mata kuliah Kalkulus 1 untuk semua mahasiswa
+rata_rata_kalkulus_1 = (data_mahasiswa["Shafira"]["Kalkulus 1"] + data_mahasiswa["Amanda"]["Kalkulus 1"] +  data_mahasiswa["Aditya"]["Kalkulus 1"] + data_mahasiswa["Nedia"]["Kalkulus 1"] + data_mahasiswa["Widya"]["Kalkulus 1"] + data_mahasiswa["Hanif"]["Kalkulus 1"] + data_mahasiswa["Andi"]["Kalkulus 1"] +  data_mahasiswa["Dhanar"]["Kalkulus 1"] + data_mahasiswa["Hikma"]["Kalkulus 1"]) / 9
+print("4. Rata-rata nilai mata kuliah kalkulus 1 untuk semua mahasiswa:", rata_rata_kalkulus_1)
+
+# 5 Rata-rata nilai mata kuliah Metode Statistika untuk semua mahasiswa
+rata_rata_metode_statistika = (data_mahasiswa["Shafira"]["Metode Statistika"] + data_mahasiswa["Amanda"]["Metode Statistika"] + data_mahasiswa["Aditya"]["Metode Statistika"] + data_mahasiswa["Nedia"]["Metode Statistika"] + data_mahasiswa["Widya"]["Metode Statistika"] + data_mahasiswa["Hanif"]["Metode Statistika"] + data_mahasiswa["Andi"]["Metode Statistika"] + data_mahasiswa["Dhanar"]["Metode Statistika"] + data_mahasiswa["Hikma"]["Metode Statistika"]) / 9
+print("5. Rata-rata nilai metode statistika untuk semua mahasiswa:", rata_rata_metode_statistika)
+
+# Weekly Exercise 3
+
+# 1 Gaji pada bulan Agustus jika Dwi tidak masuk kerja selama 3 hari, berapa gaji yang diterima oleh Dwi
+hari_kerja = 31
+hari_tidak_masuk = 3
+hari_masuk = hari_kerja - hari_tidak_masuk
+total_jam_kerja = hari_masuk * 8
+gaji_per_jam = 30000
+gaji_agustus = total_jam_kerja * gaji_per_jam
+
+print("1. Gaji Dwi pada bulan Agustus:", gaji_agustus)
+
+# 2 Gaji Tunjangan
+persentase_gaji_tunjangan = 10/100
+gaji_tunjangan = gaji_agustus * persentase_gaji_tunjangan
+
+print("2. Gaji tunjangan:", gaji_tunjangan)
+
+# 3 Gaji Lembur
+tugas_lembur = 5
+upah_lembur_perjam = 10000
+gaji_lembur = tugas_lembur * upah_lembur_perjam
+gaji_total = gaji_agustus + gaji_tunjangan + gaji_lembur
+
+print("3. Gaji total pada bulan Agustus:", gaji_total)
