@@ -1,0 +1,34 @@
+# Weekly Exercise 1
+# NOMOR 1
+nama = "Aditya Setyo Prabowo"
+prodi = "S1 Teknologi Informasi"
+npm = "2420506037"
+alamat = "Jalan Kebonsari, Bendan, Kebonsari, Wonoboyo, Temanggung"
+hobi = "Edit Jedag Jedug"
+email = "adityasetyop03@gmail.com"
+
+# NOMOR 2
+nama = "Aditya Setyo Prabowo"
+prodi = "S1 Teknologi Informasi"
+email = "adityasetyop03@gmail.com"
+
+print("Nama   :", nama)
+print("Prodi  :", prodi)
+print("Email  :", email)
+
+# NOMOR 3
+nama = "Aditya Setyo Prabowo"
+prodi = "S1 Teknologi Informasi"
+npm = "2420506037"
+alamat = "Jalan Kebonsari, Bendan, Kebonsari, Wonoboyo, Temanggung"
+
+print("Nama   :", nama)
+print("Prodi  :", prodi)
+print("NPM    :", npm)
+print("Alamat :", alamat)
+
+with open('Biodata.txt', 'w') as writefile:
+        writefile.write("Nama   : " + nama + "\n")
+        writefile.write("Prodi  : " + prodi + "\n")
+        writefile.write("NPM    : " + npm + "\n")
+        writefile.write("Alamat : " + alamat + "\n")
