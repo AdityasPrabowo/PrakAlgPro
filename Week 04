@@ -1,0 +1,54 @@
+# Weekly Exercise 1
+age = int(input("masukan umur anda: "))
+if age >= 17:
+    print("Boleh Membuat SIM" )
+else:
+    print("Tidak Boleh Membuat SIM" )
+
+# Weekly Exercise 2
+Nilai = int(input("masukan nilai anda: "))
+if Nilai >= 90:
+    print("A")
+elif Nilai >= 80:
+    print("B+")
+elif Nilai >= 70:
+    print("B")
+elif Nilai >= 60:
+    print("C+")
+elif Nilai >= 50:
+    print("C")
+elif Nilai >= 40:
+    print("D")
+else:
+    print("E")
+
+# Weekly Exercise 3
+Nilai = float(input("masukan nilai anda: "))
+if 80.00 <= Nilai <= 100:
+    print("Nilai anda A")
+elif 77.50 <= Nilai < 79.99:
+    print("Nilai anda A-")
+elif 75.00 <= Nilai < 77.49:
+    print("Nilai anda A/B")
+elif 72.50 <= Nilai < 74.99:
+    print("Nilai anda B+")
+elif 70.00 <= Nilai < 72.49:
+    print("Nilai anda B")
+elif 67.50 <= Nilai < 69.99:
+    print("Nilai anda B-")
+elif 65.00 <= Nilai < 67.49:
+    print("Nilai anda B/C")
+elif 62.50 <= Nilai < 64.99:
+    print("Nilai anda C+")
+elif 60.00 <= Nilai < 62.49:
+    print("Nilai anda C")
+elif 55.00 <= Nilai < 59.99:
+    print("Nilai anda C-")
+elif 50.00 <= Nilai < 54.99:
+    print("Nilai anda C/D")
+elif 45.00 <= Nilai < 49.99:
+    print("Nilai anda D+")
+elif 40.00 <= Nilai < 44.99:
+    print("Nilai anda D")
+else:
+    print("Nilai anda E")
