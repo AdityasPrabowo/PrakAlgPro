@@ -1,0 +1,55 @@
+# Weekly Exercise 1
+Tahun = int(input("Masukkan Tahun: "))
+
+if Tahun % 4 == 0:
+  print("Tahun Kabisat")
+else:
+  print("Bukan Tahun Kabisat")
+
+# Weekly Exercise 2
+First = int(input("Masukkan Angka Pertama: "))
+Second = int(input("Masukkan Angka Kedua: "))
+Third = int(input("Masukkan Angka Ketiga: "))
+
+if First > Second and First > Third:
+  print(f"{First} adalah bilangan terbesar")
+elif Second > First and Second > Third:
+  print(f"{Second} adalah bilangan terbesar")
+else:
+  print(f"{Third} adalah bilangan terbesar")
+
+# Weekly Exercise 3
+jenis_konsumen = input("Jenis konsumen (member/non-member): ")
+total_belanja = float(input("Total belanja: "))
+
+if jenis_konsumen.lower() == "member":
+  if total_belanja > 200000:
+    diskon = 0.04 + 0.02
+  elif total_belanja > 100000:
+    diskon = 0.03 + 0.02
+  else:
+    diskon = 0.02
+else:
+  if total_belanja > 200000:
+    diskon = 0.04
+  elif total_belanja > 100000:
+    diskon = 0.03
+  else:
+    diskon = 0 
+
+total_harga = total_belanja * (1 - diskon)
+
+print("Total harga yang harus dibayar:", total_harga)
+
+# Weekly Exercise 4
+username = input("Masukkan Username: ")
+if username == "":
+  print("username tidak boleh kosong")
+email = input("Masukkan Email: ")
+if "@" not in email:
+  print("email tidak valid")
+password = input("Masukkan Password: ")
+if len(password) < 8:
+  print("password harus lebih dari 8 karakter")
+else:
+  print("Registrasi Sukses")
