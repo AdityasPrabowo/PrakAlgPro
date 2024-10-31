@@ -1,0 +1,14 @@
+biodata = {
+  'Nama\t\t' : ': Aditya S. Prabowo',
+  'Kelas\t\t' : ': 2',
+  'Tanggal Lahir\t' : ': Mei 2006',
+  'No Hp\t\t' : ': 088 yang lain kapan kapan',
+  'Alamat\t\t' : ': Temanggung',
+  'Hobi\t\t' : ':',
+  '  1.': "Mancing",
+  '  2.': 'Gaming',
+  '  3.': 'Musik',
+}
+
+for i,j in biodata.items():
+  print(i, j)
