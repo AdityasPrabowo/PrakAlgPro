@@ -1,0 +1,57 @@
+# Weekly Exercise 1
+def recursive_factorial(n):
+  if n == 1:
+     return n
+  else:
+     return n*recursive_factorial(n-1)
+
+bilangan = int(input("Masukkan Angka : "))
+print("Faktorial dari", bilangan, "adalah", recursive_factorial(bilangan))
+
+# Weekly Exercise 2
+import math
+
+# Fungsi untuk menghitung luas lingkaran
+def hitung_luas_lingkaran():
+    jari_jari = float(input("Masukkan jari-jari lingkaran: "))
+    luas = math.pi * (jari_jari ** 2)
+    print(f"Luas lingkaran adalah: {luas:.2f}")
+
+# Fungsi untuk menghitung luas persegi
+def hitung_luas_persegi():
+    sisi = float(input("Masukkan panjang sisi persegi: "))
+    luas = sisi ** 2
+    print(f"Luas persegi adalah: {luas:.2f}")
+
+# Fungsi untuk menghitung luas segitiga
+def hitung_luas_segitiga():
+    alas = float(input("Masukkan panjang alas segitiga: "))
+    tinggi = float(input("Masukkan tinggi segitiga: "))
+    luas = 0.5 * alas * tinggi
+    print(f"Luas segitiga adalah: {luas:.2f}")
+
+# Fungsi utama untuk menampilkan menu dan memilih perhitungan
+def main():
+    while True:
+        print("\nPilih perhitungan luas bangun datar:")
+        print("1. Lingkaran")
+        print("2. Persegi")
+        print("3. Segitiga")
+        print("4. Selesai")
+
+        pilihan = input("Masukkan pilihan (1/2/3/4): ")
+
+        if pilihan == '1':
+            hitung_luas_lingkaran()
+        elif pilihan == '2':
+            hitung_luas_persegi()
+        elif pilihan == '3':
+            hitung_luas_segitiga()
+        elif pilihan == '4':
+            print("Program selesai. Terima kasih!")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan coba lagi.")
+
+# Menjalankan program utama
+main()
