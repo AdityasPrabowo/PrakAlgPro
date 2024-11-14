@@ -1,0 +1,36 @@
+# Weekly Exercise 1
+
+# import modul
+import matematika
+
+#konstanta pi
+print(f"Konstanta π \t\t = {matematika.Pi}")
+
+# luas lingkaran
+r = int(input("Jari-jari lingkaran: "))
+
+luas_lingkaran = matematika.luas_lingkaran(r)
+print()
+print(f"Luas lingakaran dengan jari-jari {r} adalah: {luas_lingkaran}")
+
+# luas persegi
+s = int(input("Panjang sisi persegi: "))
+
+luas_persegi = matematika.luas_persegi(s)
+print()
+print(f"Luas persegi dengan sisi {s} adalah: {luas_persegi}")
+
+# weekly exercise 2
+import math
+
+# menentukan nilai sin
+print(math.sin(30))
+# menentukan nilai cos
+print(math.cos(60))
+# menentukan nilai tan
+print(math.tan(45))
+# menghitung faktorial
+print(math.factorial(6))
+# menentukan nilai pangkat
+print(math.pow(2, 2))
+
