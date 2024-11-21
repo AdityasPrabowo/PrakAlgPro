@@ -1,0 +1,101 @@
+# weekly exercise 1
+
+import math
+
+# Fungsi untuk menghitung luas lingkaran
+def hitung_luas_lingkaran():
+    try:
+        jari_jari = input("Masukkan jari-jari lingkaran: ")
+        if not jari_jari.strip():  
+            raise ValueError("Input tidak boleh kosong")
+        jari_jari = float(jari_jari) 
+        luas = math.pi * (jari_jari ** 2)
+        print(f"Luas lingkaran adalah: {luas:.2f}")
+    except ValueError as e:
+        if str(e) == "Input tidak boleh kosong":
+            print(e)
+        else:
+            print("Hanya boleh memasukkan angka.")
+
+# Fungsi untuk menghitung luas persegi
+def hitung_luas_persegi():
+    try:
+        sisi = input("Masukkan panjang sisi persegi: ")
+        if not sisi.strip(): 
+            raise ValueError("Input tidak boleh kosong")
+        sisi = float(sisi) 
+        luas = sisi ** 2
+        print(f"Luas persegi adalah: {luas:.2f}")
+    except ValueError as e:
+        if str(e) == "Input tidak boleh kosong":
+            print(e)
+        else:
+            print("Hanya boleh memasukkan angka.")
+
+# Fungsi untuk menghitung luas segitiga
+def hitung_luas_segitiga():
+    try:
+        alas = input("Masukkan panjang alas segitiga: ")
+        if not alas.strip(): 
+            raise ValueError("Input tidak boleh kosong")
+        alas = float(alas)
+
+        tinggi = input("Masukkan tinggi segitiga: ")
+        if not tinggi.strip():
+            raise ValueError("Input tidak boleh kosong")
+        tinggi = float(tinggi)
+
+        luas = 0.5 * alas * tinggi
+        print(f"Luas segitiga adalah: {luas:.2f}")
+    except ValueError as e:
+        if str(e) == "Input tidak boleh kosong":
+            print(e)
+        else:
+            print("Hanya boleh memasukkan angka.")
+
+# Fungsi utama untuk menampilkan menu dan memilih perhitungan
+def main():
+    while True:
+        print("\nPilih perhitungan luas bangun datar:")
+        print("1. Lingkaran")
+        print("2. Persegi")
+        print("3. Segitiga")
+        print("4. Selesai")
+
+        pilihan = input("Masukkan pilihan (1/2/3/4): ")
+
+        if pilihan == '1':
+            hitung_luas_lingkaran()
+        elif pilihan == '2':
+            hitung_luas_persegi()
+        elif pilihan == '3':
+            hitung_luas_segitiga()
+        elif pilihan == '4':
+            print("Program selesai. Terima kasih!")
+            break
+        else:
+            print("Pilihan tidak valid. Silakan coba lagi.")
+
+# Menjalankan program utama
+main()
+
+# weekly exercise 2
+try:
+    npm = input("Masukkan NPM Anda: ")
+
+    if not npm.isdigit():
+        raise TypeError("NPM harus berupa angka!")
+
+    genap, ganjil = 0, 0
+    for num in npm:
+        num = int(num)
+        if num % 2 == 0:
+            genap += 1
+        else:
+            ganjil += 1
+
+    print("Jumlah Bilangan Genap: ", genap)
+    print("Jumlah Bilangan Ganjil: ", ganjil)
+
+except TypeError as e:
+    print("Error:", e)
