@@ -1,0 +1,58 @@
+# weekly exercise 1
+
+class AlatTulis:
+    def __init__(self, nama="", stok=0, harga_satuan=0):
+        self.nama = nama
+        self.stok = stok
+        self.harga_satuan = harga_satuan
+        self.harga_total = stok * harga_satuan
+        self.total_harga_penjualan = 0  # Untuk mencatat total harga dari transaksi
+
+    # Setter untuk memasukkan data
+    def set_data(self, nama, stok, harga_satuan):
+        self.nama = nama
+        self.stok = stok
+        self.harga_satuan = harga_satuan
+        self.harga_total = self.stok * self.harga_satuan
+
+    # Getter untuk menampilkan data
+    def get_data(self):
+        return f"Nama: {self.nama}\nStok: {self.stok}\nHarga Satuan: Rp. {self.harga_satuan}\nHarga Total: Rp. {self.harga_total}"
+
+    # Setter untuk mengelola transaksi penjualan
+    def set_transaksi(self, jumlah_terjual):
+        if jumlah_terjual <= self.stok:
+            self.stok -= jumlah_terjual
+            self.harga_total -= jumlah_terjual * self.harga_satuan
+            self.total_harga_penjualan = jumlah_terjual * self.harga_satuan
+        else:
+            self.total_harga_penjualan = "Stok tidak cukup"
+
+    # Getter untuk menampilkan transaksi
+    def get_transaksi(self):
+        if isinstance(self.total_harga_penjualan, str):  # Jika transaksi gagal
+            return self.total_harga_penjualan
+        else:
+            return f"Barang Terjual: Rp. {self.total_harga_penjualan}\nSisa Stok: {self.stok}\nHarga Total Sekarang: Rp. {self.harga_total}"
+
+# Membuat objek untuk masing-masing alat tulis
+bolpoint = AlatTulis("Bolpoint", 10, 2000)
+pensil = AlatTulis("Pensil", 10, 1000)
+penghapus = AlatTulis("Penghapus", 10, 500)
+
+# Menampilkan data awal
+print("Data Awal:")
+print(bolpoint.get_data())
+print(pensil.get_data())
+print(penghapus.get_data())
+
+# Transaksi
+print("\nTransaksi Penjualan:")
+bolpoint.set_transaksi(6)
+print(bolpoint.get_transaksi())
+
+pensil.set_transaksi(2)
+print(pensil.get_transaksi())
+
+penghapus.set_transaksi(5)
+print(penghapus.get_transaksi())
